@@ -1,0 +1,22 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title>Chirp | Login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="../controllers/authController.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../styles/chirp.css">
+</head>
+<body ng-app="chirpApp">
+	<div class="container" ng-controller="authController">
+		<h3>Login</h3>
+		<form class="form-auth" ng-submit="login()">
+			Email: <input required class ="form-control" type="username" maxlength="20" ng-model="user.username" placeholder="Email address" /><br>
+			Password: <input required class="form-control" type="password" maxlength="14" ng-model="user.password" placeholder="Password" /><br>
+			<input type="submit" value="Login" class="btn submit-btn" />
+			<p ng-bind="success_message"></p>
+		</form>
+	</div>
+
+</body>
+</html>
